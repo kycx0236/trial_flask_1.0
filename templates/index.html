@@ -1,19 +1,24 @@
-<h1>Hello World</h1>
+{% {% extends "base.html" %}%}
+{% block content %}
 
-<p> This is my first webpage!</p>
+    <h1>Hello World</h1>
 
-<p> Isn't it exciting, {{ f_name|capitalize }}? </p>
+    <p> This is my first webpage!</p>
 
-<p> {{ stuffs|safe }}</p>
+    <p> Isn't it exciting, {{ f_name|capitalize }}? </p>
 
-<h3>Favorite characters: </h3>
-{% for list in fav_char %}
-    {%if list == "Gojo"%}
-        <strong>{{ list + " is strong" }}<strong/><br/>
-    {% else %}
-        <strong>{{ list|capitalize + " is cool" }}<strong/><br/>
-    {% endif %}
-{% endfor %}
+    <p> {{ stuffs|safe }}</p>
 
-<br><br/>
-{{ fav_char.0|capitalize }}
+    <h3>Favorite characters: </h3>
+    {% for list in fav_char %}
+        {%if list == "Gojo"%}
+            <strong>{{ list + " is strong" }}<strong/><br/>
+        {% else %}
+            <strong>{{ list|capitalize + " is cool" }}<strong/><br/>
+        {% endif %}
+    {% endfor %}
+
+    <br><br/>
+    {{ fav_char.0|capitalize }}
+
+{% endblock %%}
