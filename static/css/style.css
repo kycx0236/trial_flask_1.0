@@ -1,0 +1,14 @@
+h1 {
+    color: darkslategrey;
+    font-size: 48px;
+}
+
+body {
+    background: #f4f4f4;
+
+}
+
+#demo {
+    color: black;
+    font-size: 16px;
+}

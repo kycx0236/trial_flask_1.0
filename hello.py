@@ -2,6 +2,7 @@ from flask import Flask, render_template, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField # Stringfield - input field or box, SubmitField - submit button
 from wtforms.validators import DataRequired # DataRequired - Validating field entries
+from flask_sqlalchemy import SQLAlchemy
 
 # Create a flask instance
 app = Flask(__name__)
