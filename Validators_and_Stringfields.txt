@@ -1,0 +1,35 @@
+Fields 
+# BooleanField
+# DateField
+# DateTimeField
+# DecimalField
+# FileField
+# HiddendField
+# MultipleField
+# FieldList
+# FloatField
+# FormField
+# IntegerField
+# PasswordField
+# RadioField
+# SelectField
+# SelectMultipleField
+# SubmitField
+# StringField
+# TextAreaField
+
+Validators
+# DataRequired
+# Email
+# EqualTo
+# InputRequired
+# IPAddress
+# Length
+# MacAddress
+# NumberRange
+# Optional
+# Regexp -regular expression
+# URL
+# UUID - unique user identification
+# Anyof
+# Noneof
