@@ -8,10 +8,12 @@ from datetime import datetime
 # Create a flask instance
 app = Flask(__name__)
 # Create a database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users_web.db' # Using Database
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users_web.db' # Using SQLite Database 
+# Format app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql//username:password@localhost/db_name' # Using SQLite Database
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:PaSs_KyCx_1234@localhost/user_data' # Using MySQL Database
 # Secret key
-app.config['SECRET_KEY'] = "@Kycx_N0lL@n32638739" # For CSRF protection in WTForm
+app.config['SECRET_KEY'] = "P@ssw0rd_123" # For CSRF protection in WTForm
 
 # Initialize database
 db = SQLAlchemy(app)
@@ -29,7 +31,7 @@ class User(db.Model):
 # Create the Flask application context
 with app.app_context():
     # Call db.create_all() and any other database operations here
-    db.create_all() 
+    db.create_all()
 
 # Create a flask form Class for Users
 class UserForm(FlaskForm):
